@@ -14,7 +14,6 @@ class ViewController: UIViewController {
   }
   
   @IBAction func onTapFaceCompare(_ sender: Any) {
-    performFaceCompare()
   }
   
   private func performLipSyncAuth() {
@@ -45,14 +44,6 @@ class ViewController: UIViewController {
   
   private func getTestImage() -> UIImage? {
     return UIImage(named: "testPhoto")
-  }
-  
-  private func performFaceCompare() {
-   
-  }
-  
-  private func getEIDImagetoEnroll() -> UIImage {
-    return UIImage()
   }
   
   private func showAlert(with message: String) {
