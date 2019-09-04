@@ -1,0 +1,5 @@
+To validate Aimbrain SDK
+download the project
+perform pod install
+run the application
+click on button -> Validation with lipsync
