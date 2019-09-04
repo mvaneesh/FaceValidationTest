@@ -1,0 +1,19 @@
+{
+  "name": "AimBrainSDK",
+  "version": "0.6.5",
+  "summary": "AimBrainSDK security library",
+  "homepage": "https://aimbrain.github.io/aimbrain-api/",
+  "authors": "AimBrain",
+  "source": {
+    "git": "https://github.com/aimbrain/aimbrain-ios-sdk.git",
+    "tag": "0.6.5"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": [
+    "Source/*.{h,m,swift}",
+    "Source/**/*.{h,m,swift}"
+  ],
+  "resources": "Resources/*"
+}

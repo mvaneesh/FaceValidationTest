@@ -1,0 +1,6 @@
+framework module Pods_AimbrainValidation {
+  umbrella header "Pods-AimbrainValidation-umbrella.h"
+
+  export *
+  module * { export * }
+}

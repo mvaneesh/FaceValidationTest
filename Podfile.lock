@@ -1,0 +1,21 @@
+PODS:
+  - AimBrainSDK (0.6.5)
+
+DEPENDENCIES:
+  - AimBrainSDK (from `https://github.com/aimbrain/aimbrain-ios-sdk.git`)
+
+EXTERNAL SOURCES:
+  AimBrainSDK:
+    :git: https://github.com/aimbrain/aimbrain-ios-sdk.git
+
+CHECKOUT OPTIONS:
+  AimBrainSDK:
+    :commit: b5f53aebabd0c6c83dbacf5a1327272a0285fa07
+    :git: https://github.com/aimbrain/aimbrain-ios-sdk.git
+
+SPEC CHECKSUMS:
+  AimBrainSDK: ef2cc1ecb59d18c4e6783398d70db7387c659b33
+
+PODFILE CHECKSUM: 9ed8ceffe0c3dc7e49e164ca26ab984aa4f038e9
+
+COCOAPODS: 1.5.3
