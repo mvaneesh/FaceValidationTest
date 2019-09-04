@@ -48,30 +48,7 @@ class ViewController: UIViewController {
   }
   
   private func performFaceCompare() {
-    guard let testPhoto = getTestImage() else {
-      return
-    }
-    let eidPhotoImageArr: [UIImage] = [testPhoto]
-    AMBNManager.sharedInstance().openFaceImagesCapture(
-      withTopHint: "To authenticate please face the camera directly and press 'camera' button",
-      bottomHint: "Position your face fully within the outline with eyes between the lines.",
-      batchSize: 3,
-      delay: 0.3,
-      from: self) { (images, error) in
-        AMBNManager.sharedInstance().createSession(withUserId: UUID().uuidString) { (result, error) in
-          if result != nil {
-            AMBNManager.sharedInstance().compareFaceImages(eidPhotoImageArr, toFaceImages: images, completionHandler: { (result, error) in
-              DispatchQueue.main.async {
-                if let compareResult = result {
-                  self.showAlert(with: String(format: "Success : %d", compareResult.secondLiveliness.intValue))
-                } else {
-                  self.showAlert(with: "Error")
-                }
-              }
-            })
-          }
-        }
-    }
+   
   }
   
   private func getEIDImagetoEnroll() -> UIImage {
@@ -94,7 +71,7 @@ extension ViewController: AMBNFaceRecordingViewControllerDelegate {
     
     AMBNManager.sharedInstance()?.enrollFaceVideo(video, completionHandler: { (result, error) in
       if let result = result {
-        print(result.success)
+        self.showAlert(with: String(format: "Success %d", result.success))
       } else {
         self.showAlert(with: "failed")
       }
