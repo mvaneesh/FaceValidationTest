@@ -82,15 +82,16 @@ NSString *const AMBNFaceTokenWithoutSessionEndpoint = @"face/token/nosession";
     AMBNSerializedRequest *serialized = [self serializeRequestData:data];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
+    [request setTimeoutInterval:400];
     [request setValue:_apiKey forHTTPHeaderField:@"X-aimbrain-apikey"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     NSData *signatureData = [self calculateSignatureForHTTPMethod:request.HTTPMethod path:url.path httpBody:serialized.data key: self.secret];
     NSString *singature;
-    if([signatureData respondsToSelector:@selector(base64Encoding)]){
-        singature = [signatureData base64Encoding];
-    } else {
+//    if([signatureData respondsToSelector:@selector(base64Encoding)]){
+//        singature = [signatureData base64Encoding];
+//    } else {
         singature = [signatureData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
-    }
+    //}
     [request setValue:singature forHTTPHeaderField:@"X-aimbrain-signature"];
     request.HTTPBody = serialized.data;
     

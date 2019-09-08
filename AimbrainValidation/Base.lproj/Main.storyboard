@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b38-yf-Mwy">
-                                <rect key="frame" x="117" y="309" width="180" height="78"/>
+                                <rect key="frame" x="117" y="309" width="193" height="78"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="1sv-5x-bgm"/>
-                                    <constraint firstAttribute="width" constant="180" id="XyE-Rv-VWZ"/>
+                                    <constraint firstAttribute="width" constant="193" id="XyE-Rv-VWZ"/>
                                 </constraints>
-                                <state key="normal" title="Liveliness LipSync">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Liveliness with LipSync">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onTapLivelinessWithLipSync:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D5w-Bx-Pvy"/>
@@ -49,11 +49,14 @@
                         <constraints>
                             <constraint firstItem="WBw-Ra-AZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3qj-Z5-G0J"/>
                             <constraint firstItem="WBw-Ra-AZc" firstAttribute="top" secondItem="b38-yf-Mwy" secondAttribute="bottom" constant="100" id="Enl-tY-qHY"/>
-                            <constraint firstItem="b38-yf-Mwy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cfy-fv-Gt5"/>
+                            <constraint firstItem="b38-yf-Mwy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="6.5" id="cfy-fv-Gt5"/>
                             <constraint firstItem="b38-yf-Mwy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="w6i-gK-hlC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lipSyncButton" destination="b38-yf-Mwy" id="48I-kA-Iwz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
